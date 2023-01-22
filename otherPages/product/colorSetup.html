@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS File -->
+  <link rel="stylesheet" href="../../styles/style.css">
+  <!-- daisyUi link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            colorGrayText: "#555555",
+            primaryBG: "#F6F8FB"
+          }
+        }
+      }
+    }
+  </script>
+  <title>ENORSIA - Color Setup</title>
+</head>
+
+<body>
+  <!------------------------------ 
+  daisyUI drawer and body content 
+  ------------------------------->
+  <aside>
+    <div class="drawer drawer-mobile">
+      <input id="product-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+        <!-- Page content here -->
+        <div>
+          <!------------- 
+          navbar section  
+          --------------->
+          <header class="px-10 lg:px-20 py-2 md:py-5 bg-transparent">
+            <nav class="navbar px-0">
+              <label for="product-drawer" class="mr-auto lg:hidden rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6 md:w-8 md:h-8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                </svg>
+              </label>
+              <div class="mx-auto lg:hidden">
+                <a href="/">
+                  <img src="../../resources/logo/enorsia-logo.png" alt="enorsia" class="w-32 md:w-40">
+                </a>
+              </div>
+              <div class="hidden lg:block mr-auto flex-col items-start">
+                <h4 class="text-xl font-bold">Welcome, <span>Tanvir</span></h4>
+                <p class="text-sm text-colorGrayText font-medium">05 January 2023 | 11:59 AM GMT</p>
+              </div>
+              <div class="ml-auto hidden lg:flex">
+                <ul class="flex items-center gap-7">
+                  <!-- message icon -->
+                  <li class="rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                    </svg>
+                  </li>
+                  <!-- notification icon -->
+                  <li class="rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                    </svg>
+                    <div class="bg-red-500 w-[8px] h-[8px] rounded-full absolute top-2 right-4"></div>
+                  </li>
+                  <li class="relative">
+                    <form>
+                      <input type="text" name="search" placeholder="Search..." class="border border-gray-300 py-2 pl-12 pr-2 rounded-lg w-96 outline-gray-300 placeholder:text-colorGrayText placeholder:text-sm">
+                      <button type="submit" class="absolute left-0 top-0 border-r border-gray-300 rounded-l-lg py-[9px] px-3 transition-all duration-300 hover:bg-gray-300">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown relative">
+                <ul class="flex items-center gap-1 md:gap-3 lg:hidden">
+                  <!-- message icon -->
+                  <li class="rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                    </svg>
+                  </li>
+                  <!-- notification icon -->
+                  <li class="rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                    </svg>
+                    <div class="bg-red-500 w-[8px] h-[8px] rounded-full absolute top-2 right-3.5 md:right-4"></div>
+                  </li>
+                  <!-- search icon -->
+                  <li tabindex="0" class="rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300">
+                    <i class="fa-solid fa-magnifying-glass md:text-lg"></i>
+                  </li>
+                </ul>
+                <ul tabindex="0" class="dropdown-content  bg-white rounded w-96 absolute top-12 right-0 shadow-lg">
+                  <li class="p-6">
+                    <form class="relative">
+                      <input type="text" name="search" placeholder="Search..."
+                        class="border border-gray-300 py-2 pl-24 pr-2 outline-gray-300 rounded-lg w-full placeholder:text-colorGrayText placeholder:text-sm">
+                      <button type="submit"
+                        class="font-semibold absolute left-0 top-0 bg-gray-300 rounded-l-lg py-[9px] px-3 transition-all duration-300 hover:bg-gray-400">Search</button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+          <!-- navbar end -->
+
+          <!--------------------- 
+            body content started
+           --------------------->
+          <main class="bg-primaryBG px-10 md:px-20 py-24">
+            <div class="lg:hidden text-center mr-auto flex-col items-start mb-28">
+              <h4 class="text-xl font-bold">Welcome, <span>Tanvir</span></h4>
+              <p class="text-sm text-colorGrayText font-medium">05 January 2023 | 11:59 AM GMT</p>
+            </div>
+
+            <!-- form started -->
+            <section>
+              <h5 class="text-center lg:text-start text-xl md:text-2xl font-bold mb-20 lg:mb-28">Color Setup</h5>
+              <form class="custom-form">
+                <div class="grid grid-cols-1 lg:grid-cols-3 items-stretch lg:items-end gap-16">
+                  <!-- color name -->
+                  <div>
+                    <label class="block mb-6 text-xl font-medium">Color Name</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="colorName" class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Select Color</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="blue">Blue</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                    <!-- color code -->
+                    <div>
+                      <label for="color-code" class="block mb-6 text-xl font-medium">Add Color Code</label>
+                      <input type="text" name="colorCode" id="color-code" placeholder="Enter color code" class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                    </div>
+                  <!-- form submit btn -->
+                  <div class="lg:flex justify-center">
+                    <button type="submit" class="w-full md:w-auto py-4 px-10 rounded-lg bg-black text-white font-semibold text-lg md:text-xl">Save</button>
+                  </div>
+                </div>
+              </form>
+            </section>
+            <!-- form end -->
+
+            <!-- table start -->
+            <section class="mt-40 p-12 bg-white rounded-xl">
+              <div class="mb-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p>Show <span class="mx-2 py-1 px-6 rounded-lg border border-gray-300">6</span> entries</p>
+                <form>
+                  <label for="search">Search</label>
+                  <input type="text" name="search" id="search" placeholder="Search..." class="rounded-lg border border-gray-300 py-1 px-4 ml-4">
+                </form>
+              </div>
+
+              <div class="overflow-x-auto rounded-lg relative">
+                <table class="w-full text-sm text-left">
+                  <!-- head -->
+                  <thead class="bg-gray-300">
+                    <tr>
+                      <th scope="col" class="py-4 px-4 w-1/2">Color Name</th>
+                      <th scope="col" class="py-4 px-4 w-1/2">Color Code</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- row 1 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">Black</td>
+                      <td class="py-2 px-4">123BX</td>
+                    </tr>
+                    <!-- row 2 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">White</td>
+                      <td class="py-2 px-4">456WX</td>
+                    </tr>
+                    <!-- row 3 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">Blue</td>
+                      <td class="py-2 px-4">783GX</td>
+                    </tr>
+                    <!-- row 4 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">White</td>
+                      <td class="py-2 px-4">456WX</td>
+                    </tr>
+                    <!-- row 5 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">Blue</td>
+                      <td class="py-2 px-4">783GX</td>
+                    </tr>
+                    <!-- row 6 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">Black</td>
+                      <td class="py-2 px-4">123BX</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <!-- table end -->
+          </main>
+          <!-- body content end -->
+        </div>
+      </div>
+
+      <!------------------ 
+        sidebar elements 
+      ------------------->
+      <div class="drawer-side">
+        <label for="product-drawer" class="drawer-overlay"></label>
+        <ul class="menu w-80 bg-white lg:bg-transparent text-base-content sticky">
+          <!-- Sidebar content/menu -->
+          <div class="hidden lg:block border-b-2 border-black pb-[29px]">
+            <div class="px-12">
+              <a href="/">
+                <img src="../../resources/logo/enorsia-logo.png" alt="enorsia" class="w-32 md:w-40">
+              </a>
+            </div>
+          </div>
+          <ul class="mt-16 flex flex-col gap-8 custom-dashboard">
+            <li class="rounded-xl">
+              <a href="/index.html" class="block bg-transparent px-12 py-3 text-xl text-black rounded-xl relative">
+                <div class="border-2 h-4 w-1 text-white absolute top-[18px] left-0"></div>
+                <i class="fa-solid fa-table-columns"></i> 
+                Dashboard
+              </a></li>
+            <li class="rounded-xl">
+              <a href="/otherPages/product/product.html" class="block bg-transparent px-12 py-3 text-xl text-black rounded-xl relative">
+                <div class="border-2 h-4 w-1 text-white absolute top-[18px] left-0"></div>
+                <i class="fa-brands fa-hive"></i>
+                Product
+                <i class="fa-solid fa-angle-down ml-20"></i>
+              </a>
+              <ul class="sub-menu shadow-lg rounded-lg">
+                <li><a href="/otherPages/product/lookupSetup.html" class="bg-white text-black">Lookup Setup</a></li>
+                <li><a href="/otherPages/product/lookupTypeSetup.html">Lookup Type Setup</a></li>
+                <li><a href="/otherPages/product/productCategory.html">Product Category</a></li>
+                <li><a href="/otherPages/product/colorSetup.html">Color Setup</a></li>
+                <li><a href="/otherPages/product/sizeSetup.html">Size Setup</a></li>
+                <li><a href="/otherPages/product/StyleSetup.html">Style Setup</a></li>
+              </ul>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <!-- JavaScript file -->
+  <script src="../../js/index.js"></script>
+  <!-- Font Awesome Icon -->
+  <script src="https://kit.fontawesome.com/2167f91135.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

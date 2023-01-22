@@ -134,23 +134,23 @@
               <h5 class="text-center lg:text-start text-xl md:text-2xl font-bold mb-20 lg:mb-28">Look up</h5>
               <form class="custom-form">
                 <div class="grid grid-cols-1 lg:grid-cols-3 items-stretch lg:items-end gap-16">
-                    <!-- lookup name -->
-                    <div>
-                      <label for="name" class="block mb-6 text-xl font-medium">Name</label>
-                      <input type="text" name="name" id="name" placeholder="Enter lookup name" class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  <!-- lookup name -->
+                  <div>
+                    <label for="name" class="block mb-6 text-xl font-medium">Name</label>
+                    <input type="text" name="lookupName" id="name" placeholder="Enter lookup name" class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <!-- lookup type -->
+                  <div>
+                    <label class="block mb-6 text-xl font-medium">Type</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="type" class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Select type</option>
+                        <option value="option1">option 1</option>
+                        <option value="option2">option 2</option>
+                        <option value="option3">option 3</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
                     </div>
-                    <!-- lookup type -->
-                    <div>
-                      <label class="block mb-6 text-xl font-medium">Type</label>
-                      <div class="relative bg-white border border-gray-300 rounded-lg">
-                        <select name="type" class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                          <option disabled selected>Select type</option>
-                          <option value="option1">option 1</option>
-                          <option value="option2">option 2</option>
-                          <option value="option3">option 3</option>
-                        </select>
-                        <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
-                      </div>
                   </div>
                   <!-- form submit btn -->
                   <div class="lg:flex justify-center">
