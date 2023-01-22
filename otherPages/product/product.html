@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS File -->
+  <link rel="stylesheet" href="../../styles/style.css">
+  <!-- daisyUi link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            colorGrayText: "#555555",
+            primaryBG: "#F6F8FB"
+          }
+        }
+      }
+    }
+  </script>
+  <title>ENORSIA - Product</title>
+</head>
+
+<body>
+  <!------------------------------ 
+  daisyUI drawer and body content 
+  ------------------------------->
+  <aside>
+    <div class="drawer drawer-mobile">
+      <input id="product-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+        <!-- Page content here -->
+        <div>
+          <!------------- 
+          navbar section  
+          --------------->
+          <header class="px-10 lg:px-20 py-2 md:py-5 bg-transparent">
+            <nav class="navbar px-0">
+              <label for="product-drawer" class="mr-auto lg:hidden rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6 md:w-8 md:h-8">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                </svg>
+              </label>
+              <div class="mx-auto lg:hidden">
+                <a href="/">
+                  <img src="../../resources/logo/enorsia-logo.png" alt="enorsia" class="w-32 md:w-40">
+                </a>
+              </div>
+              <div class="hidden lg:block mr-auto flex-col items-start">
+                <h4 class="text-xl font-bold">Welcome, <span>Tanvir</span></h4>
+                <p class="text-sm text-colorGrayText font-medium">05 January 2023 | 11:59 AM GMT</p>
+              </div>
+              <div class="ml-auto hidden lg:flex">
+                <ul class="flex items-center gap-7">
+                  <!-- message icon -->
+                  <li class="rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                    </svg>
+                  </li>
+                  <!-- notification icon -->
+                  <li class="rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                    </svg>
+                    <div class="bg-red-500 w-[8px] h-[8px] rounded-full absolute top-2 right-4"></div>
+                  </li>
+                  <li class="relative">
+                    <form>
+                      <input type="text" name="search" placeholder="Search..." class="border border-gray-300 py-2 pl-12 pr-2 rounded-lg w-96 outline-gray-300 placeholder:text-colorGrayText placeholder:text-sm">
+                      <button type="submit" class="absolute left-0 top-0 border-r border-gray-300 rounded-l-lg py-[9px] px-3 transition-all duration-300 hover:bg-gray-300">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown relative">
+                <ul class="flex items-center gap-1 md:gap-3 lg:hidden">
+                  <!-- message icon -->
+                  <li class="rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                    </svg>
+                  </li>
+                  <!-- notification icon -->
+                  <li class="rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 md:w-6 md:h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                    </svg>
+                    <div class="bg-red-500 w-[8px] h-[8px] rounded-full absolute top-2 right-3.5 md:right-4"></div>
+                  </li>
+                  <!-- search icon -->
+                  <li tabindex="0" class="rounded-lg py-[9px] px-3 cursor-pointer transition-all duration-300 hover:bg-gray-300">
+                    <i class="fa-solid fa-magnifying-glass md:text-lg"></i>
+                  </li>
+                </ul>
+                <ul tabindex="0" class="dropdown-content  bg-white rounded w-96 absolute top-12 right-0 shadow-lg">
+                  <li class="p-6">
+                    <form class="relative">
+                      <input type="text" name="search" placeholder="Search..."
+                        class="border border-gray-300 py-2 pl-24 pr-2 outline-gray-300 rounded-lg w-full placeholder:text-colorGrayText placeholder:text-sm">
+                      <button type="submit"
+                        class="font-semibold absolute left-0 top-0 bg-gray-300 rounded-l-lg py-[9px] px-3 transition-all duration-300 hover:bg-gray-400">Search</button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+          <!-- navbar end -->
+
+          <!--------------------- 
+            body content started
+           --------------------->
+          <main class="bg-primaryBG px-10 md:px-20 py-24">
+            <div class="lg:hidden text-center mr-auto flex-col items-start mb-28">
+              <h4 class="text-xl font-bold">Welcome, <span>Tanvir</span></h4>
+              <p class="text-sm text-colorGrayText font-medium">05 January 2023 | 11:59 AM GMT</p>
+            </div>
+
+            <!-- form started -->
+            <section>
+              <form class="custom-form">
+                <div class="flex items-center justify-between mb-20 lg:mb-28">
+                  <p class="text-xl md:text-2xl font-bold">Add Products</p>
+                  <label class="block">
+                    <span class="py-4 px-6 rounded-lg bg-black text-white font-semibold text-base md:text-xl cursor-pointer">Bulk Upload</span>
+                    <input type="file" name="bulk-file" class="hidden">
+                  </label>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:px-11">
+                  <div>
+                    <label for="department" class="block mb-6 text-xl font-medium">Department</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="department" id="department"
+                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Chose a department</option>
+                        <option value="Ladies">Ladies</option>
+                        <option value="Gents">Gents</option>
+                        <option value="Children">Children</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="season" class="block mb-6 text-xl font-medium">Season</label>
+                    <input type="text" name="season" id="season" placeholder="Season"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <div>
+                    <label for="status" class="block mb-6 text-xl font-medium">Initial / Repeat</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="status" id="status"
+                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Select any of these</option>
+                        <option value="Initial">Initial</option>
+                        <option value="Repeat">Repeat</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="season-phase" class="block mb-6 text-xl font-medium">Season Phase</label>
+                    <input type="number" name="season-phase" id="season-phase" min="0" value="0"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <div>
+                    <label for="product-launch" class="block mb-6 text-xl font-medium">Product Launch Month</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="product-launch-month" id="product-launch"
+                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Pick a month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="product-category" class="block mb-6 text-xl font-medium">Product Category</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="product-category" id="product-category"
+                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Select product category</option>
+                        <option value="Ladies T-Shirt">Ladies T-Shirt</option>
+                        <option value="Gents Shirt">Gents Shirt</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="item-no" class="block mb-6 text-xl font-medium">Item No</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="item-no" id="item-no"
+                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Select item no</option>
+                        <option value="ENDD23-W-TSH01">ENDD23-W-TSH01</option>
+                        <option value="ENDD23-W-TSH02">ENDD23-W-TSH02</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block mb-6 text-xl font-medium">
+                      Product Image</label>
+                    <label
+                      class="block w-full py-2 pl-4 pr-2 rounded-lg text-colorGrayText border-2 bg-white border-gray-300 outline-gray-300">
+                      <div class="flex items-center justify-between">
+                        <span id="product-img" class="whitespace-nowrap overflow-hidden text-ellipsis">Upload product image here</span>
+                        <span
+                          class="bg-gray-300 text-black py-2 px-4 rounded-md cursor-pointer font-semibold transition-all duration-300 hover:bg-gray-200">Browse</span>
+                      </div>
+                      <input type="file" name="product-img" id="product-img" accept="image/*" class="hidden" onchange='uploadFile(this)'>
+                    </label>
+                  </div>
+                  <div>
+                    <label for="style-no" class="block mb-6 text-xl font-medium">Style / Design No</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="style-no" id="style-no"
+                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Select any of these</option>
+                        <option value="ENDD23-W-TSH01">ENDD23-W-TSH01</option>
+                        <option value="ENDD23-W-TSH02">ENDD23-W-TSH02</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="description" class="block mb-6 text-xl font-medium">Style Description</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="description" id="description"
+                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Pick style description</option>
+                        <option value="Rounded T-Shirt">Rounded T-Shirt</option>
+                        <option value="Long T-Shirt">Long T-Shirt</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="fabrication" class="block mb-6 text-xl font-medium">Fabrication</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="fabrication" id="fabrication" class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Chose any fabrics</option>
+                        <option value="100% Combed Cotton S/J 160 GSM">100% Combed Cotton S/J 160 GSM</option>
+                        <option value="80% Combed Cotton S/J 160 GSM">80% Combed Cotton S/J 160 GSM</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="product-code" class="block mb-6 text-xl font-medium">Product Code</label>
+                    <input type="text" name="product-code" id="product-code" placeholder="Product code"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                </div>
+
+                <!------------------------- 
+                form product color section 
+                -------------------------->
+                <div class="flex flex-col gap-8 mt-28">
+                  <div class="p-11 bg-white rounded-xl shadow-lg">
+                    <div
+                      class="text-xl font-bold flex flex-col md:flex-row justify-between gap-20 md:gap-0 text-center md:text-start">
+                      <p>Add Product quantity</p>
+                      <p>1. Black - 12345TX</p>
+                    </div>
+                    <div class="mt-10 md:mt-20 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 gap-3">
+                      <div>
+                        <label for="xs" class="block text-xl font-bold text-center my-4">XS</label>
+                        <input type="number" name="size-xs" id="xs" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="s" class="block text-xl font-bold text-center my-4">S</label>
+                        <input type="number" name="size-s" id="s" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="m" class="block text-xl font-bold text-center my-4">M</label>
+                        <input type="number" name="size-m" id="m" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="l" class="block text-xl font-bold text-center my-4">L</label>
+                        <input type="number" name="size-l" id="l" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="xl" class="block text-xl font-bold text-center my-4">XL</label>
+                        <input type="number" name="size-xl" id="xl" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="xxl" class="block text-xl font-bold text-center my-4">XXL</label>
+                        <input type="number" name="size-xxl" id="xxl" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="30s" class="block text-xl font-bold text-center my-4">30 S</label>
+                        <input type="number" name="size-30s" id="30s" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                    </div>
+                    <div class="mt-12 flex flex-col-reverse md:flex-row items-center justify-between">
+                      <p class="text-xl font-bold">Total product of this color: <span class="text-green-600">00</span>
+                      </p>
+                      <div class="mb-12 md:mb-0 w-full md:w-1/2 relative custom-file-upload">
+                        <input type="file" name="black-img" accept="image/*">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p-11 bg-white rounded-xl shadow-lg">
+                    <div
+                      class="text-xl font-bold flex flex-col md:flex-row justify-between gap-20 md:gap-0 text-center md:text-start">
+                      <p>Add Product quantity</p>
+                      <p>2. White - 54321WX</p>
+                    </div>
+                    <div class="mt-10 md:mt-20 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 gap-3">
+                      <div>
+                        <label for="xs" class="block text-xl font-bold text-center my-4">XS</label>
+                        <input type="number" name="size-xs" id="xs" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="s" class="block text-xl font-bold text-center my-4">S</label>
+                        <input type="number" name="size-s" id="s" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="m" class="block text-xl font-bold text-center my-4">M</label>
+                        <input type="number" name="size-m" id="m" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="l" class="block text-xl font-bold text-center my-4">L</label>
+                        <input type="number" name="size-l" id="l" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="xl" class="block text-xl font-bold text-center my-4">XL</label>
+                        <input type="number" name="size-xl" id="xl" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="xxl" class="block text-xl font-bold text-center my-4">XXL</label>
+                        <input type="number" name="size-xxl" id="xxl" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="30s" class="block text-xl font-bold text-center my-4">30 S</label>
+                        <input type="number" name="size-30s" id="30s" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="40s" class="block text-xl font-bold text-center my-4">40 S</label>
+                        <input type="number" name="size-40s" id="40s" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                      <div>
+                        <label for="42s" class="block text-xl font-bold text-center my-4">42 S</label>
+                        <input type="number" name="size-42s" id="42s" min="0" value="0"
+                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                      </div>
+                    </div>
+                    <div class="mt-12 flex flex-col-reverse md:flex-row items-center justify-between">
+                      <p class="text-xl font-bold">Total product of this color: <span class="text-green-600">00</span>
+                      </p>
+                      <div class="mb-12 md:mb-0 w-full md:w-1/2 relative custom-file-upload">
+                        <input type="file" name="white-img" accept="image/*">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!------------------- 
+                form pricing section 
+                -------------------->
+                <div class="mt-28 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                  <div>
+                    <label for="po-qty" class="block mb-6 text-xl font-medium">PO Order Qty</label>
+                    <input type="number" name="po-qty" id="po-qty" placeholder="Order quantity in number"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <div>
+                    <label for="price" class="block mb-6 text-xl font-medium">Price $ (FOB)</label>
+                    <input type="text" name="price" id="price" placeholder="Price in number"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <div>
+                    <label for="total-value" class="block mb-6 text-xl font-medium">Total Value $ (FOB)</label>
+                    <input type="text" name="totalValue" id="total-value" placeholder="Value in number"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <div>
+                    <label for="selling-price" class="block mb-6 text-xl font-medium">Selling Price $</label>
+                    <input type="text" name="sellingPrice" id="selling-price" placeholder="selling price in number"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <div>
+                    <label for="discount-price" class="block mb-6 text-xl font-medium">Discount / Festive Price
+                      $</label>
+                    <input type="text" name="discountPrice" id="discount-price" placeholder="Discount or Festive price in number"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <div>
+                    <label for="stock-price" class="block mb-6 text-xl font-medium">Season End / Stock Clear Price
+                      $</label>
+                    <input type="text" name="stockPrice" id="stock-price" placeholder="Season-end or Stock-clear price in number"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                </div>
+
+                <!---------------------------- 
+                form product delivery section 
+                ----------------------------->
+                <div class="mt-28 grid grid-cols-1 md:grid-cols-2 gap-10">
+                  <div>
+                    <label class="block mb-6 text-xl font-medium">PO Issue Qty</label>
+                    <input type="date" name="poDate" id="po-date"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <div>
+                    <label class="block mb-6 text-xl font-medium">Delivery Date (ETD)</label>
+                    <input type="date" name="deliveryDate" id="delivery-date"
+                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <div>
+                    <label class="block mb-6 text-xl font-medium">Packing Mode</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="packingMode" id="packing-mode"
+                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Select packing mode</option>
+                        <option value="Single">Single</option>
+                        <option value="Multiple">Multiple</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block mb-6 text-xl font-medium">Shipping Mode</label>
+                    <div class="relative bg-white border border-gray-300 rounded-lg">
+                      <select name="shippingMode" id="shipping-mode"
+                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                        <option disabled selected>Pick shipping mode</option>
+                        <option value="Sea">SEA</option>
+                        <option value="Air">AIR</option>
+                      </select>
+                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block mb-6 text-xl font-medium">UK Warehouse Date</label>
+                    <input type="date" name="ukWarehouseDate" id="uk-warehouse-date" class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                  <div>
+                    <label class="block mb-6 text-xl font-medium">Warehouse Code Date (ETA)</label>
+                    <input type="date" name="warehouseCodeDate" id="warehouse-code-date" class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
+                  </div>
+                </div>
+                <!-- form submit btn -->
+                <div class="flex justify-end mt-28">
+                  <button type="submit" class="py-4 px-6 rounded-lg bg-black text-white font-semibold text-xl">Save Product</button>
+                </div>
+              </form>
+            </section>
+            <!-- form end -->
+          </main>
+          <!-- body content end -->
+        </div>
+      </div>
+
+      <!------------------ 
+        sidebar elements 
+      ------------------->
+      <div class="drawer-side">
+        <label for="product-drawer" class="drawer-overlay"></label>
+        <ul class="menu w-80 bg-white lg:bg-transparent text-base-content sticky">
+          <!-- Sidebar content/menu -->
+          <div class="hidden lg:block border-b-2 border-black pb-[29px]">
+            <div class="px-12">
+              <a href="/">
+                <img src="../../resources/logo/enorsia-logo.png" alt="enorsia" class="w-32 md:w-40">
+              </a>
+            </div>
+          </div>
+          <ul class="mt-16 flex flex-col gap-8 custom-dashboard">
+            <li class="rounded-xl">
+              <a href="/index.html" class="block bg-transparent px-12 py-3 text-xl text-black rounded-xl relative">
+                <div class="border-2 h-4 w-1 text-white absolute top- left-0"></div>
+                <i class="fa-solid fa-table-columns"></i> 
+                Dashboard
+              </a></li>
+            <li class="rounded-xl">
+              <a href="/otherPages/product/product.html" class="block bg-transparent px-12 py-3 text-xl text-black rounded-xl relative">
+                <div class="border-2 h-4 w-1 text-white absolute top- left-0"></div>
+                <i class="fa-brands fa-hive"></i>
+                Product
+              </a>
+              <ul class="shadow-lg rounded-lg">
+                <li><a href="">Lookup Setup</a></li>
+                <li><a href="">Lookup Type Setup</a></li>
+                <li><a href="">Product Category</a></li>
+                <li><a href="">Color Setup</a></li>
+                <li><a href="">Size Setup</a></li>
+                <li><a href="">Style Setup</a></li>
+              </ul>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <!-- JavaScript file -->
+  <script src="../../js/index.js"></script>
+  <!-- Font Awesome Icon -->
+  <script src="https://kit.fontawesome.com/2167f91135.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

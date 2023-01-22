@@ -10,20 +10,39 @@ body {
 }
 
 
-/* sidebar list */
-.custom-dashboard-options li:hover{
+/* sidebar menu */
+.custom-dashboard li:hover a{
   transition: all linear 0.3s;
   background: #000000;
-}
-.custom-dashboard-options li:hover a{
-  transition: all linear 0.3s;
   color: #ffffff;
 }
-.custom-active{
+/* active link */
+.custom-dashboard a:is(:link, :active, :visited).active{
+  color: #ffffff ;
   background: #000000;
 }
-.custom-active a{
-  color: #ffffff;
+/* sub-menu */
+.custom-dashboard li a{
+  position: relative;
+  z-index: 10;
+}
+.custom-dashboard ul{
+  background: #ffffff;
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  left: 16px;
+  display: none;
+}
+.custom-dashboard li ul li {
+  margin-bottom: 10px;
+}
+.custom-dashboard li:hover ul{
+  display: block;
+}
+.custom-dashboard li ul li a{
+  background: #ffffff !important;
+  color: #000000 !important;
 }
 
 
