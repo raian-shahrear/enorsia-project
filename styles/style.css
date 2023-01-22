@@ -31,6 +31,7 @@ body {
 }
 .custom-dashboard ul{
   background: #ffffff;
+  width: 90%;
   padding: 15px;
   position: absolute;
   top: 100%;
