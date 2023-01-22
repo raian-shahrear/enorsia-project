@@ -128,14 +128,17 @@
               <h4 class="text-xl font-bold">Welcome, <span>Tanvir</span></h4>
               <p class="text-sm text-colorGrayText font-medium">05 January 2023 | 11:59 AM GMT</p>
             </div>
-            <section class="flex items-center justify-between mb-20 lg:mb-28">
-              <p class="text-2xl font-bold">Add Products</p>
-              <button class="py-4 px-6 rounded-lg bg-black text-white font-semibold text-xl">Bulk Upload</button>
-            </section>
 
             <!-- form started -->
             <section>
               <form class="custom-form">
+                <div class="flex items-center justify-between mb-20 lg:mb-28">
+                  <p class="text-xl md:text-2xl font-bold">Add Products</p>
+                  <label class="block">
+                    <span class="py-4 px-6 rounded-lg bg-black text-white font-semibold text-base md:text-xl cursor-pointer">Bulk Upload</span>
+                    <input type="file" name="bulk-file" class="hidden">
+                  </label>
+                </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:px-11">
                   <div>
                     <label for="department" class="block mb-6 text-xl font-medium">Department</label>

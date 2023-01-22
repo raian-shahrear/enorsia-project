@@ -37,7 +37,7 @@ body {
 }
 
 
-/* file:image file */
+/* file:image field */
 .custom-file-upload input[type='file']{
   border: 2px solid #d1d5db;
   color: #555555;
