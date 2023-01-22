@@ -21,6 +21,9 @@ body {
   color: #ffffff ;
   background: #000000;
 }
+.sub-menu li a:is(:link, :active, :visited).sub-active{
+  color: #000000 !important;
+}
 /* sub-menu */
 .custom-dashboard li a{
   position: relative;
@@ -28,7 +31,7 @@ body {
 }
 .custom-dashboard ul{
   background: #ffffff;
-  padding: 20px;
+  padding: 15px;
   position: absolute;
   top: 100%;
   left: 16px;
@@ -40,8 +43,13 @@ body {
 .custom-dashboard li:hover ul{
   display: block;
 }
-.custom-dashboard li ul li a{
+.sub-menu li a{
   background: #ffffff !important;
+  color: #999999 !important;
+  font-weight: 700;
+}
+.sub-menu li a:hover{
+  transition: all linear 0.3s;
   color: #000000 !important;
 }
 
