@@ -118,7 +118,11 @@
               </div>
             </nav>
           </header>
+          <!-- navbar end -->
 
+          <!--------------------- 
+            body content started
+           --------------------->
           <main class="bg-primaryBG px-10 md:px-20 py-24">
             <div class="lg:hidden text-center mr-auto flex-col items-start mb-28">
               <h4 class="text-xl font-bold">Welcome, <span>Tanvir</span></h4>
@@ -128,6 +132,8 @@
               <p class="text-2xl font-bold">Add Products</p>
               <button class="py-4 px-6 rounded-lg bg-black text-white font-semibold text-xl">Bulk Upload</button>
             </section>
+
+            <!-- form started -->
             <section>
               <form class="custom-form">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:px-11">
@@ -167,7 +173,6 @@
                     <input type="number" name="season-phase" id="season-phase" min="0" value="0"
                       class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
                   </div>
-
                   <div>
                     <label for="product-launch" class="block mb-6 text-xl font-medium">Product Launch Month</label>
                     <div class="relative bg-white border border-gray-300 rounded-lg">
@@ -202,7 +207,6 @@
                       <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
                     </div>
                   </div>
-
                   <div>
                     <label for="item-no" class="block mb-6 text-xl font-medium">Item No</label>
                     <div class="relative bg-white border border-gray-300 rounded-lg">
@@ -228,7 +232,6 @@
                       <input type="file" name="product-img" id="product-img" accept="image/*" class="hidden" onchange='uploadFile(this)'>
                     </label>
                   </div>
-
                   <div>
                     <label for="style-no" class="block mb-6 text-xl font-medium">Style / Design No</label>
                     <div class="relative bg-white border border-gray-300 rounded-lg">
@@ -253,7 +256,6 @@
                       <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
                     </div>
                   </div>
-
                   <div>
                     <label for="fabrication" class="block mb-6 text-xl font-medium">Fabrication</label>
                     <div class="relative bg-white border border-gray-300 rounded-lg">
@@ -482,14 +484,19 @@
                 </div>
               </form>
             </section>
+            <!-- form end -->
           </main>
+          <!-- body content end -->
         </div>
       </div>
-      <!-- sidebar elements -->
+
+      <!------------------ 
+        sidebar elements 
+      ------------------->
       <div class="drawer-side">
         <label for="product-drawer" class="drawer-overlay"></label>
         <ul class="menu w-80 bg-white lg:bg-transparent text-base-content sticky">
-          <!-- Sidebar content here -->
+          <!-- Sidebar content/menu -->
           <div class="hidden lg:block border-b-2 border-black pb-[29px]">
             <div class="px-12">
               <a href="/">
