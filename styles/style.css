@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
+}
+
+
+/* sidebar list */
+.custom-dashboard-options li:hover{
+  transition: all linear 0.3s;
+  background: #000000;
+}
+.custom-dashboard-options li:hover a{
+  transition: all linear 0.3s;
+  color: #ffffff;
+}
+.custom-active{
+  background: #000000;
+}
+.custom-active a{
+  color: #ffffff;
+}
+
+
+/* form number field */
+.custom-form input[type='number'] {
+  -moz-appearance:textfield;
+}
+.custom-form input::-webkit-outer-spin-button,
+.custom-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+
+/* file:image file */
+.custom-file-upload input[type='file']{
+  border: 2px solid #d1d5db;
+  color: #555555;
+  background: transparent;
+  border-radius: 10px;
+  width: 100%;
+  padding: 16px 12px;
+}
+.custom-file-upload input[type='file']::after{
+  content: " - as image for this color";
+}
+.custom-file-upload input[type='file']::-webkit-file-upload-button{
+  background: #d1d5db;
+  color: #000000;
+  border-color: transparent;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 14px;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  cursor: pointer;
+}
+.custom-file-upload:hover input[type='file']::-webkit-file-upload-button {
+  transition: all linear 0.3s;
+  background: #e5e7eb;
+}
+
+
