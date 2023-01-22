@@ -131,362 +131,89 @@
 
             <!-- form started -->
             <section>
+              <h5 class="text-center lg:text-start text-xl md:text-2xl font-bold mb-20 lg:mb-28">Look up</h5>
               <form class="custom-form">
-                <div class="flex items-center justify-between mb-20 lg:mb-28">
-                  <p class="text-xl md:text-2xl font-bold">Add Products</p>
-                  <label class="block">
-                    <span class="py-4 px-6 rounded-lg bg-black text-white font-semibold text-base md:text-xl cursor-pointer">Bulk Upload</span>
-                    <input type="file" name="bulk-file" class="hidden">
-                  </label>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:px-11">
-                  <div>
-                    <label for="department" class="block mb-6 text-xl font-medium">Department</label>
-                    <div class="relative bg-white border border-gray-300 rounded-lg">
-                      <select name="department" id="department"
-                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                        <option disabled selected>Chose a department</option>
-                        <option value="Ladies">Ladies</option>
-                        <option value="Gents">Gents</option>
-                        <option value="Children">Children</option>
-                      </select>
-                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
+                <div class="grid grid-cols-1 lg:grid-cols-3 items-stretch lg:items-end gap-16">
+                    <!-- lookup name -->
+                    <div>
+                      <label for="name" class="block mb-6 text-xl font-medium">Name</label>
+                      <input type="text" name="name" id="name" placeholder="Enter name" class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
                     </div>
-                  </div>
-                  <div>
-                    <label for="season" class="block mb-6 text-xl font-medium">Season</label>
-                    <input type="text" name="season" id="season" placeholder="Season"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                  <div>
-                    <label for="status" class="block mb-6 text-xl font-medium">Initial / Repeat</label>
-                    <div class="relative bg-white border border-gray-300 rounded-lg">
-                      <select name="status" id="status"
-                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                        <option disabled selected>Select any of these</option>
-                        <option value="Initial">Initial</option>
-                        <option value="Repeat">Repeat</option>
-                      </select>
-                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <label for="season-phase" class="block mb-6 text-xl font-medium">Season Phase</label>
-                    <input type="number" name="season-phase" id="season-phase" min="0" value="0"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                  <div>
-                    <label for="product-launch" class="block mb-6 text-xl font-medium">Product Launch Month</label>
-                    <div class="relative bg-white border border-gray-300 rounded-lg">
-                      <select name="product-launch-month" id="product-launch"
-                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                        <option disabled selected>Pick a month</option>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="Jun">Jun</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
-                      </select>
-                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <label for="product-category" class="block mb-6 text-xl font-medium">Product Category</label>
-                    <div class="relative bg-white border border-gray-300 rounded-lg">
-                      <select name="product-category" id="product-category"
-                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                        <option disabled selected>Select product category</option>
-                        <option value="Ladies T-Shirt">Ladies T-Shirt</option>
-                        <option value="Gents Shirt">Gents Shirt</option>
-                      </select>
-                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <label for="item-no" class="block mb-6 text-xl font-medium">Item No</label>
-                    <div class="relative bg-white border border-gray-300 rounded-lg">
-                      <select name="item-no" id="item-no"
-                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                        <option disabled selected>Select item no</option>
-                        <option value="ENDD23-W-TSH01">ENDD23-W-TSH01</option>
-                        <option value="ENDD23-W-TSH02">ENDD23-W-TSH02</option>
-                      </select>
-                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <label class="block mb-6 text-xl font-medium">
-                      Product Image</label>
-                    <label
-                      class="block w-full py-2 pl-4 pr-2 rounded-lg text-colorGrayText border-2 bg-white border-gray-300 outline-gray-300">
-                      <div class="flex items-center justify-between">
-                        <span id="product-img" class="whitespace-nowrap overflow-hidden text-ellipsis">Upload product image here</span>
-                        <span
-                          class="bg-gray-300 text-black py-2 px-4 rounded-md cursor-pointer font-semibold transition-all duration-300 hover:bg-gray-200">Browse</span>
+                    <!-- lookup type -->
+                    <div>
+                      <label class="block mb-6 text-xl font-medium">Type</label>
+                      <div class="relative bg-white border border-gray-300 rounded-lg">
+                        <select name="type" class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
+                          <option disabled selected>Select type</option>
+                          <option value="option1">option 1</option>
+                          <option value="option 2">option 2</option>
+                          <option value="option 3">option 3</option>
+                        </select>
+                        <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
                       </div>
-                      <input type="file" name="product-img" id="product-img" accept="image/*" class="hidden" onchange='uploadFile(this)'>
-                    </label>
                   </div>
+                  <!-- form submit btn -->
                   <div>
-                    <label for="style-no" class="block mb-6 text-xl font-medium">Style / Design No</label>
-                    <div class="relative bg-white border border-gray-300 rounded-lg">
-                      <select name="style-no" id="style-no"
-                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                        <option disabled selected>Select any of these</option>
-                        <option value="ENDD23-W-TSH01">ENDD23-W-TSH01</option>
-                        <option value="ENDD23-W-TSH02">ENDD23-W-TSH02</option>
-                      </select>
-                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
-                    </div>
+                    <button type="submit" class="w-full md:w-auto py-4 px-10 rounded-lg bg-black text-white font-semibold text-lg md:text-xl">Save</button>
                   </div>
-                  <div>
-                    <label for="description" class="block mb-6 text-xl font-medium">Style Description</label>
-                    <div class="relative bg-white border border-gray-300 rounded-lg">
-                      <select name="description" id="description"
-                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                        <option disabled selected>Pick style description</option>
-                        <option value="Rounded T-Shirt">Rounded T-Shirt</option>
-                        <option value="Long T-Shirt">Long T-Shirt</option>
-                      </select>
-                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <label for="fabrication" class="block mb-6 text-xl font-medium">Fabrication</label>
-                    <div class="relative bg-white border border-gray-300 rounded-lg">
-                      <select name="fabrication" id="fabrication" class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                        <option disabled selected>Chose any fabrics</option>
-                        <option value="100% Combed Cotton S/J 160 GSM">100% Combed Cotton S/J 160 GSM</option>
-                        <option value="80% Combed Cotton S/J 160 GSM">80% Combed Cotton S/J 160 GSM</option>
-                      </select>
-                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <label for="product-code" class="block mb-6 text-xl font-medium">Product Code</label>
-                    <input type="text" name="product-code" id="product-code" placeholder="Product code"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                </div>
-
-                <!------------------------- 
-                form product color section 
-                -------------------------->
-                <div class="flex flex-col gap-8 mt-28">
-                  <div class="p-11 bg-white rounded-xl shadow-lg">
-                    <div
-                      class="text-xl font-bold flex flex-col md:flex-row justify-between gap-20 md:gap-0 text-center md:text-start">
-                      <p>Add Product quantity</p>
-                      <p>1. Black - 12345TX</p>
-                    </div>
-                    <div class="mt-10 md:mt-20 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 gap-3">
-                      <div>
-                        <label for="xs" class="block text-xl font-bold text-center my-4">XS</label>
-                        <input type="number" name="size-xs" id="xs" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="s" class="block text-xl font-bold text-center my-4">S</label>
-                        <input type="number" name="size-s" id="s" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="m" class="block text-xl font-bold text-center my-4">M</label>
-                        <input type="number" name="size-m" id="m" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="l" class="block text-xl font-bold text-center my-4">L</label>
-                        <input type="number" name="size-l" id="l" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="xl" class="block text-xl font-bold text-center my-4">XL</label>
-                        <input type="number" name="size-xl" id="xl" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="xxl" class="block text-xl font-bold text-center my-4">XXL</label>
-                        <input type="number" name="size-xxl" id="xxl" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="30s" class="block text-xl font-bold text-center my-4">30 S</label>
-                        <input type="number" name="size-30s" id="30s" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                    </div>
-                    <div class="mt-12 flex flex-col-reverse md:flex-row items-center justify-between">
-                      <p class="text-xl font-bold">Total product of this color: <span class="text-green-600">00</span>
-                      </p>
-                      <div class="mb-12 md:mb-0 w-full md:w-1/2 relative custom-file-upload">
-                        <input type="file" name="black-img" accept="image/*">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="p-11 bg-white rounded-xl shadow-lg">
-                    <div
-                      class="text-xl font-bold flex flex-col md:flex-row justify-between gap-20 md:gap-0 text-center md:text-start">
-                      <p>Add Product quantity</p>
-                      <p>2. White - 54321WX</p>
-                    </div>
-                    <div class="mt-10 md:mt-20 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 gap-3">
-                      <div>
-                        <label for="xs" class="block text-xl font-bold text-center my-4">XS</label>
-                        <input type="number" name="size-xs" id="xs" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="s" class="block text-xl font-bold text-center my-4">S</label>
-                        <input type="number" name="size-s" id="s" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="m" class="block text-xl font-bold text-center my-4">M</label>
-                        <input type="number" name="size-m" id="m" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="l" class="block text-xl font-bold text-center my-4">L</label>
-                        <input type="number" name="size-l" id="l" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="xl" class="block text-xl font-bold text-center my-4">XL</label>
-                        <input type="number" name="size-xl" id="xl" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="xxl" class="block text-xl font-bold text-center my-4">XXL</label>
-                        <input type="number" name="size-xxl" id="xxl" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="30s" class="block text-xl font-bold text-center my-4">30 S</label>
-                        <input type="number" name="size-30s" id="30s" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="40s" class="block text-xl font-bold text-center my-4">40 S</label>
-                        <input type="number" name="size-40s" id="40s" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                      <div>
-                        <label for="42s" class="block text-xl font-bold text-center my-4">42 S</label>
-                        <input type="number" name="size-42s" id="42s" min="0" value="0"
-                          class="w-full py-4 px-8 rounded-lg text-center text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                      </div>
-                    </div>
-                    <div class="mt-12 flex flex-col-reverse md:flex-row items-center justify-between">
-                      <p class="text-xl font-bold">Total product of this color: <span class="text-green-600">00</span>
-                      </p>
-                      <div class="mb-12 md:mb-0 w-full md:w-1/2 relative custom-file-upload">
-                        <input type="file" name="white-img" accept="image/*">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!------------------- 
-                form pricing section 
-                -------------------->
-                <div class="mt-28 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                  <div>
-                    <label for="po-qty" class="block mb-6 text-xl font-medium">PO Order Qty</label>
-                    <input type="number" name="po-qty" id="po-qty" placeholder="Order quantity in number"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                  <div>
-                    <label for="price" class="block mb-6 text-xl font-medium">Price $ (FOB)</label>
-                    <input type="text" name="price" id="price" placeholder="Price in number"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                  <div>
-                    <label for="total-value" class="block mb-6 text-xl font-medium">Total Value $ (FOB)</label>
-                    <input type="text" name="totalValue" id="total-value" placeholder="Value in number"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                  <div>
-                    <label for="selling-price" class="block mb-6 text-xl font-medium">Selling Price $</label>
-                    <input type="text" name="sellingPrice" id="selling-price" placeholder="selling price in number"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                  <div>
-                    <label for="discount-price" class="block mb-6 text-xl font-medium">Discount / Festive Price
-                      $</label>
-                    <input type="text" name="discountPrice" id="discount-price" placeholder="Discount or Festive price in number"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                  <div>
-                    <label for="stock-price" class="block mb-6 text-xl font-medium">Season End / Stock Clear Price
-                      $</label>
-                    <input type="text" name="stockPrice" id="stock-price" placeholder="Season-end or Stock-clear price in number"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                </div>
-
-                <!---------------------------- 
-                form product delivery section 
-                ----------------------------->
-                <div class="mt-28 grid grid-cols-1 md:grid-cols-2 gap-10">
-                  <div>
-                    <label class="block mb-6 text-xl font-medium">PO Issue Qty</label>
-                    <input type="date" name="poDate" id="po-date"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                  <div>
-                    <label class="block mb-6 text-xl font-medium">Delivery Date (ETD)</label>
-                    <input type="date" name="deliveryDate" id="delivery-date"
-                      class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                  <div>
-                    <label class="block mb-6 text-xl font-medium">Packing Mode</label>
-                    <div class="relative bg-white border border-gray-300 rounded-lg">
-                      <select name="packingMode" id="packing-mode"
-                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                        <option disabled selected>Select packing mode</option>
-                        <option value="Single">Single</option>
-                        <option value="Multiple">Multiple</option>
-                      </select>
-                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <label class="block mb-6 text-xl font-medium">Shipping Mode</label>
-                    <div class="relative bg-white border border-gray-300 rounded-lg">
-                      <select name="shippingMode" id="shipping-mode"
-                        class="appearance-none w-full py-4 px-8 rounded-lg text-colorGrayText border border-gray-300 outline-gray-300 relative z-10 bg-transparent cursor-pointer">
-                        <option disabled selected>Pick shipping mode</option>
-                        <option value="Sea">SEA</option>
-                        <option value="Air">AIR</option>
-                      </select>
-                      <i class="fa-solid fa-circle-chevron-down text-xl absolute top-5 right-5"></i>
-                    </div>
-                  </div>
-                  <div>
-                    <label class="block mb-6 text-xl font-medium">UK Warehouse Date</label>
-                    <input type="date" name="ukWarehouseDate" id="uk-warehouse-date" class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                  <div>
-                    <label class="block mb-6 text-xl font-medium">Warehouse Code Date (ETA)</label>
-                    <input type="date" name="warehouseCodeDate" id="warehouse-code-date" class="w-full py-4 px-8 rounded-lg text-colorGrayText border-2 border-gray-300 outline-gray-300">
-                  </div>
-                </div>
-                <!-- form submit btn -->
-                <div class="flex justify-end mt-28">
-                  <button type="submit" class="py-4 px-6 rounded-lg bg-black text-white font-semibold text-xl">Save Product</button>
                 </div>
               </form>
             </section>
             <!-- form end -->
+
+            <!-- table start -->
+            <section class="mt-40 p-12 bg-white rounded-xl">
+              <div class="mb-6 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p>Show <span class="mx-2 py-1 px-6 rounded-lg border border-gray-300">6</span> entries</p>
+                <form>
+                  <label for="search">Search</label>
+                  <input type="text" name="search" id="search" placeholder="Search..." class="rounded-lg border border-gray-300 py-1 px-4 ml-4">
+                </form>
+              </div>
+
+              <div class="overflow-x-auto rounded-lg relative">
+                <table class="w-full text-sm text-left">
+                  <!-- head -->
+                  <thead class="bg-gray-300">
+                    <tr>
+                      <th scope="col" class="py-4 px-4 w-1/2">Name</th>
+                      <th scope="col" class="py-4 px-4 w-1/2">Type Name</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- row 1 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">Cy Ganderton</td>
+                      <td class="py-2 px-4">Quality Control Specialist</td>
+                    </tr>
+                    <!-- row 2 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">Hart Hagerty</td>
+                      <td class="py-2 px-4">Desktop Support Technician</td>
+                    <!-- row 3 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">Brice Swyre</td>
+                      <td class="py-2 px-4">Tax Accountant</td>
+                    </tr>
+                    <!-- row 4 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">Brice Swyre</td>
+                      <td class="py-2 px-4">Tax Accountant</td>
+                    </tr>
+                    <!-- row 5 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">Brice Swyre</td>
+                      <td class="py-2 px-4">Tax Accountant</td>
+                    </tr>
+                    <!-- row 6 -->
+                    <tr class="border-b">
+                      <td class="py-2 px-4">Brice Swyre</td>
+                      <td class="py-2 px-4">Tax Accountant</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
           </main>
           <!-- body content end -->
         </div>

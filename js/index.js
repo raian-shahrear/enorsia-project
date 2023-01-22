@@ -5,8 +5,14 @@ function uploadFile(target) {
 
 // active menu options
 const activeLink = window.location.pathname;
-const links = document.querySelectorAll(".sub-menu a").forEach(link => {
+const links = document.querySelectorAll(".custom-dashboard a").forEach(link => {
   if(link.href.includes(`${activeLink}`)){
+    link.classList.add("active");
+  }
+})
+const activeSubLink = window.location.pathname;
+const subLinks = document.querySelectorAll(".sub-menu a").forEach(link => {
+  if(link.href.includes(`${activeSubLink}`)){
     link.classList.add("sub-active");
   }
 })
